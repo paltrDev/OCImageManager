@@ -118,15 +118,22 @@ var SAMPLE_DATA = [
 	}
 ];
 
+//Массив кочует по всем уровням компонентов через props
+//todo: try to implement dependency injection (maybe look at Redux)
 const TRANSLATIONS = {
-	"filter_by_file": "Имя файла",
-	"filter_by_usage": "Использование",
-	"filter_by_size": "Размер файла",
-	column_image: "Изображение",
-	column_file: "Имя файла",
-	column_size: "Размер",
-	column_usage: "Где используется",
-	column_actions: "Действия"
+	"file_filter_caption": "Имя файла",
+	"usage_filter_caption": "Использование",
+	"usage_filter_in_use": "Используется",
+	"usage_filter_not_in_use": "Не используется",
+	"size_filter_caption": "Размер файла",
+	"size_filter_more": "Больше",
+	"size_filter_less": "Меньше",
+	"column_image": "Изображение",
+	"column_file": "Имя файла",
+	"column_size": "Размер",
+	"column_usage": "Где используется",
+	"column_actions": "Действия",
+	"not_in_use": "Не используется"
 };
 
-ReactDOM.render(<App images={SAMPLE_DATA} />, document.getElementById('app'));
+ReactDOM.render(<App images={SAMPLE_DATA} translations={TRANSLATIONS} />, document.getElementById('app'));

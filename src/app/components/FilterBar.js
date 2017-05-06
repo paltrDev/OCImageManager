@@ -9,9 +9,9 @@ export class FilterBar extends React.Component {
 		return (
 			<div className="well">
 				<div className="row">
-					<FileFilter value={this.props.filterData.file} onChange={this.props.handleFileFilterChange} caption={this.props.translations.filter_by_file}/>
-					<UsageFilter value={this.props.filterData.usage} onChange={this.props.handleUsageFilterChange} caption={this.props.translations.filter_by_usage}/>
-					<SizeFilter value={this.props.filterData.size} onChange={this.props.handleSizeFilterChange} caption={this.props.translations.filter_by_size}/>
+					<FileFilter value={this.props.filterData.file} onChange={this.props.handleFileFilterChange} translations={this.props.translations}/>
+					<UsageFilter value={this.props.filterData.usage} onChange={this.props.handleUsageFilterChange} translations={this.props.translations}/>
+					<SizeFilter value={this.props.filterData.size} onChange={this.props.handleSizeFilterChange} translations={this.props.translations}/>
 				</div>
 			</div>
 			);

@@ -14,7 +14,7 @@ export class FileFilter extends React.Component {
 		return (
 			    <div className="col-sm-4">
 					<div className="form-group">
-                        <label className="control-label">{this.props.caption}:</label>
+                        <label className="control-label">{this.props.translations.file_filter_caption}:</label>
                         <input type="text" className="form-control" value={this.props.value} onChange={this.handleChange} ></input>
                     </div>
 				</div>

@@ -27,18 +27,18 @@ export class SizeFilter extends React.Component {
 		return (
 			<div className="col-sm-4">
 				<div className="form-group">
-					<label className="control-label">{this.props.caption}:</label>
+					<label className="control-label">{this.props.translations.size_filter_caption}:</label>
 					<div className="input-group">
 						<span className="input-group-addon">
 							<label className="radio-inline">
-								<input type="radio" name="radioGroup" value="0" checked={this.props.value.option == 0} onChange={this.handleRadioChange} ref={(input) => {this.More = input}} /> Больше
+								<input type="radio" name="radioGroup" value="0" checked={this.props.value.option == 0} onChange={this.handleRadioChange} ref={(input) => {this.More = input}} /> {this.props.translations.size_filter_more}
 							</label>
 							<label className="radio-inline">
-								<input type="radio" name="radioGroup" value="1" checked={this.props.value.option == 1} onChange={this.handleRadioChange} ref={(input) => {this.Less = input}} /> Меньше
+								<input type="radio" name="radioGroup" value="1" checked={this.props.value.option == 1} onChange={this.handleRadioChange} ref={(input) => {this.Less = input}} /> {this.props.translations.size_filter_less}
 							</label>
 						</span>
 						<input type="text" className="form-control" placeholder="" aria-describedby="basic-addon2" value={this.props.value.value} onChange={this.handleChange} ref={(input) => {this.Size = input}} />
-						<span className="input-group-addon">КБ</span>
+						<span className="input-group-addon">Kb</span>
 					</div>
 				</div>
 			</div>

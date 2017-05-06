@@ -37,7 +37,7 @@ export class ImageTable extends React.Component {
 			default: images.sort((a, b) => { return this.state.sortOrder == 'asc' ? a.file.toLowerCase() > b.file.toLowerCase() : a.file.toLowerCase() < b.file.toLowerCase(); });
 				break;
 		}
-		const rows = images.map((i) => <ImageRow key={i.id} image={i} handleCheckedStateChange={this.props.handleCheckedStateChange} />);
+		const rows = images.map((i) => <ImageRow key={i.id} image={i} handleCheckedStateChange={this.props.handleCheckedStateChange} translations={this.props.translations} />);
 		return (
                 <form action="" method="post" id="form" >
                     <div className="table-responsive">
